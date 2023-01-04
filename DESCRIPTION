@@ -1,0 +1,24 @@
+Package: dietry
+Type: Package
+Title: Utilities for Calculating Dietary Intake Indicators for Food Security
+    Assessments
+Version: 0.0.0.9000
+Authors@R: person("Ernest", "Guevarra", 
+    comment = c(ORCID = "0000-0002-4887-4415"), 
+    email = "ernest@guevarra.io", role = c("aut", "cre"))
+Description: Food security assessments utilise several dietary intake indicators
+    as proxy measures for diet quality, diet sufficiency, and food availability
+    either at individual or household level. Utilities for recoding and
+    calculating these indicators support in establishing consistent and reliable
+    results.
+License: GPL (>= 3)
+Suggests: 
+    spelling
+Encoding: UTF-8
+Language: en-GB
+LazyData: true
+RoxygenNote: 7.2.3
+Roxygen: list(markdown = TRUE)
+URL: https://nutriverse.io/dietry/, https://github.com/nutriverse/dietry
+BugReports: https://github.com/nutriverse/dietry/issues
+
