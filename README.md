@@ -11,6 +11,8 @@ public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostat
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![R-CMD-check](https://github.com/nutriverse/dietry/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/nutriverse/dietry/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/nutriverse/dietry/branch/main/graph/badge.svg)](https://app.codecov.io/gh/nutriverse/dietry?branch=main)
 <!-- badges: end -->
 
 Food security assessments utilise several dietary intake indicators as
@@ -41,7 +43,6 @@ citation provided by a call to the `citation` function as follows:
 
 ``` r
 citation("dietry")
-#> 
 #> To cite dietry in publications use:
 #> 
 #>   Ernest Guevarra (2023). dietry: Utilities for Calculating Dietary

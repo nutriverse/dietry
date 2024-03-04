@@ -1,5 +1,3 @@
-################################################################################
-#
 #'
 #' Utilities for Calculating Dietary Intake Indicators for Food Security
 #' Assessments
@@ -14,6 +12,4 @@
 #' @keywords internal
 #' @name dietry
 #'
-#
-################################################################################
 "_PACKAGE"
