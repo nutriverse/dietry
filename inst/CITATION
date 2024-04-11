@@ -1,18 +1,10 @@
-citHeader("To cite dietry in publications use:")
-
-citEntry(
-  entry    = "Manual",
-  title    = "dietry: Utilities for Calculating Dietary Intake Indicators for Food Security
-Assessments",
-  author   = person("Ernest Guevarra"),
-  year     = "2023",
-  note     = "R package version 0.0.0.9000",
-  url      = "https://nutriverse.io/dietry/",
-  textVersion = paste(
-    "Ernest Guevarra (2023).",
-    "dietry: Utilities for Calculating Dietary Intake Indicators for Food Security
-Assessments",
-    "R package version 0.0.0.9000",
-    "URL https://nutriverse.io/dietry/"
-  )
+bibentry(
+  bibtype = "Manual",
+  header  = "To cite dietry in publications, use:",
+  title   = "dietry: Utilities for Dietary Intake Indicators for Food Security Assessments",
+  author  = person("Ernest Guevarra"),
+  year    = "2024",
+  note    = "R package version 0.0.0.9000",
+  url     = "https://nutriverse.io/dietry/"
 )
+

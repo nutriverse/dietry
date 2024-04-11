@@ -1,6 +1,5 @@
 #'
-#' Utilities for Calculating Dietary Intake Indicators for Food Security
-#' Assessments
+#' Utilities for Dietary Intake Indicators for Food Security Assessments
 #'
 #' Food security assessments utilise several dietary intake indicators
 #' as proxy measures for diet quality, diet sufficiency, and food availability
