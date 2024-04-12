@@ -4,8 +4,7 @@
 \name{dietry}
 \alias{dietry-package}
 \alias{dietry}
-\title{Utilities for Calculating Dietary Intake Indicators for Food Security
-Assessments}
+\title{Utilities for Dietary Intake Indicators for Food Security Assessments}
 \description{
 Food security assessments utilise several dietary intake indicators
 as proxy measures for diet quality, diet sufficiency, and food availability

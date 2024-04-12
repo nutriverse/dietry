@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# dietry: Utilities for Calculating Dietary Intake Indicators for Food Security Assessments
+# dietry: Utilities for Dietary Intake Indicators for Food Security Assessments <img src="man/figures/logo.png" width="200" align="right" />
 
 <!-- badges: start -->
 
@@ -21,6 +21,8 @@ either at individual or household level. Utilities for recoding and
 calculating these indicators support in establishing consistent and
 reliable results.
 
+## What does `dietry` do?
+
 ## Installation
 
 The `dietry` package is still in active development and not yet
@@ -34,8 +36,6 @@ if (!require(remotes)) install.packages("remotes")
 remotes::install_github("nutriverse/dietry")
 ```
 
-## What does `dietry` do?
-
 ## Citation
 
 If you find the `dietry` package useful, please cite using the suggested
@@ -43,19 +43,18 @@ citation provided by a call to the `citation` function as follows:
 
 ``` r
 citation("dietry")
-#> To cite dietry in publications use:
+#> To cite dietry in publications, use:
 #> 
-#>   Ernest Guevarra (2023). dietry: Utilities for Calculating Dietary
-#>   Intake Indicators for Food Security Assessments R package version
-#>   0.0.0.9000 URL https://nutriverse.io/dietry/
+#>   Ernest Guevarra (2024). _dietry: Utilities for Dietary Intake
+#>   Indicators for Food Security Assessments_. R package version
+#>   0.0.0.9000, <https://nutriverse.io/dietry/>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
 #>   @Manual{,
-#>     title = {dietry: Utilities for Calculating Dietary Intake Indicators for Food Security
-#> Assessments},
+#>     title = {dietry: Utilities for Dietary Intake Indicators for Food Security Assessments},
 #>     author = {{Ernest Guevarra}},
-#>     year = {2023},
+#>     year = {2024},
 #>     note = {R package version 0.0.0.9000},
 #>     url = {https://nutriverse.io/dietry/},
 #>   }
