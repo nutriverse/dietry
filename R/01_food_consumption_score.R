@@ -1,7 +1,3 @@
-#'
-#' F
-#' 
-
 #' 
 #' Recode Food Consumption Score (FCS) data
 #'     
@@ -14,12 +10,14 @@
 #' @returns An integer vector with possible values ranging from 0 to 7.
 #' 
 #' @examples
-#' fcs_recode_group(fcs01$FCSStap)
+#' fcs_recode(fcs01$FCSStap)
+#' 
+#' @author Ernest Guevarra
 #' 
 #' @export
 #'     
 
-fcs_recode_group <- function(x, na_values = NA) {
+fcs_recode <- function(x, na_values = NA) {
   ## Recode NA values to NA ----
   x <- ifelse(x %in% na_values, NA, x)
 
@@ -35,113 +33,74 @@ fcs_recode_group <- function(x, na_values = NA) {
 
 
 #'
-#' Map Food Consumption Score data variables to corresponding FCS food groups
-#' 
-#' @param staples,pulses,vegetables,fruits,meat_fish,milk,sugar,oil,condiments
-#'   A character value or vector of values for variables name/s for 
-#'   corresponding food groups.
-#' 
-#' @returns A named list of variable names for corresponding food groups.
-#' 
-#' @examples
-#' vars <- paste0(
-#'   "FCS", 
-#'   c("Stap", "Pulse", "Veg", "Fruit", "Pr", "Dairy", "Sugar", "Fat", "Cond")
-#' ) |>
-#'   as.list()
-#' 
-#' do.call(fcs_map_fg_vars, vars) 
-#' 
-#' @export
-#' 
-
-fcs_map_fg_vars <- function(staples, 
-                            pulses, 
-                            vegetables,
-                            fruits, 
-                            meat_fish, 
-                            milk,
-                            sugar, 
-                            oil, 
-                            condiments) {
-  list(
-    staples = staples,
-    pulses = pulses,
-    vegetables = vegetables,
-    fruits = fruits,
-    meat_fish = meat_fish,
-    milk = milk,
-    sugar = sugar,
-    oil = oil,
-    condiments = condiments
-  )
-}
-
-
-#'
 #' Calculate Food Consumption Score (FCS)
 #'
-#' @param fg_df A data.frame with FCS data.
+#' @param df A data.frame with FCS data.
 #' @param var_map A named list of FCS food groups mapped to corresponding 
-#'   variable names in `fg_df`. This can be produced using [fcs_map_fg_vars()].
+#'   variable names in `df`. This can be produced using 
+#' [fcs_fg_map_variables()].
 #' @param weights A numeric vector of FCS weights applied to corresponding food
 #'   groups. The weights should be ordered as that for staples, pulses,
 #'   vegetables, fruits, meat and fish, dairy, sugar, oil, and condiments.
 #'   Default to NULL which uses the weights based on current FCS 
 #'   recommendations. Only change this if new recommendations have been provided
 #'   or for testing/studying new/experimental FCS weighting systems.
-#' @param add Logical. Should the resulting FCS scores be added to `fg_df`? 
+#' @param add Logical. Should the resulting FCS scores be added to `df`? 
 #'   Default to TRUE.
 #' 
-#' @returns If `add = TRUE`, a data.frame based on `fg_df` with a new variable
+#' @returns If `add = TRUE`, a data.frame based on `df` with a new variable
 #'   named `fcs` for the calculated food consumption scores. Otherwise, a
 #'   numeric vector of the calculated food consumption scores.
 #' 
 #' @examples
-#' vars <- paste0(
-#'   "FCS", 
-#'   c("Stap", "Pulse", "Veg", "Fruit", "Pr", "Dairy", "Sugar", "Fat", "Cond")
-#' ) |>
-#'   as.list()
+#' var_map <- fcs_fg_map_variables(
+#'   staples = "FCSStap",
+#'   pulses = "FCSPulse",
+#'   vegetables = "FCSVeg",
+#'   fruits = "FCSFruit",
+#'   meatfish = "FCSPr",
+#'   milk = "FCSDairy",
+#'   sugar = "FCSSugar",
+#'   oil = "FCSFat",
+#'   condiment = "FCSCond"
+#' ) 
 #' 
-#' var_map <- do.call(fcs_map_fg_vars, vars) 
-#' 
-#' fcs_calculate_score(fg_df = fcs01, var_map = var_map)
+#' fcs_calculate(df = fcs01, var_map = var_map)
 #'
 #' @author Ernest Guevarra
 #' 
 #' @export
 #' 
 
-fcs_calculate_score <- function(fg_df, 
-                                var_map,  
-                                weights = NULL,
-                                add = TRUE) {
+fcs_calculate <- function(df, 
+                          var_map,  
+                          weights = NULL,
+                          add = TRUE) {
   ## Determine weights to use ----
   if (is.null(weights)) weights <- c(2, 3, 1, 1, 4, 4, 0.5, 0.5, 0)
 
   ## Recode food groups
-  fg_df_recoded <- fg_df[ , unlist(var_map)] |>
-    apply(MARGIN = 2, FUN = fcs_recode_group, simplify = TRUE)
+  df_recoded <- df[ , unlist(var_map)] |>
+    apply(MARGIN = 2, FUN = fcs_recode, simplify = TRUE)
   
   ## Create a weights matrix compatible to fg_df ----
   weights_matrix <- lapply(
     X = weights,
     FUN = rep,
-    times = nrow(fg_df)
+    times = nrow(df)
   ) |>
     stats::setNames(paste0("w", seq_len(length(weights)))) |>
     do.call(cbind, args = _)
 
   ## Weight food consumption ----
-  fg_df_weighted <- fg_df_recoded * weights_matrix
+  df_weighted <- df_recoded * weights_matrix
   
   ## Calculate FCS ----
-  fcs <- rowSums(fg_df_weighted, na.rm = TRUE)
+  fcs <- rowSums(df_weighted, na.rm = TRUE)
   
   ## Should score be added to fg_df_recoded? ----
   if (add) {
-    fcs <- data.frame(fg_df_recoded, fcs = fcs)
+    fcs <- data.frame(df_recoded, fcs = fcs)
   } else {
     fcs <- fcs
   }
@@ -152,7 +111,7 @@ fcs_calculate_score <- function(fg_df,
 
 
 #'
-#' Classify Food Consumption Score
+#' Classify Food Consumption Score (FCS)
 #' 
 #' @param fcs A vector of food consumption scores.
 #' @param cutoff A numeric vector of length 2 for the cut-offs to use for
@@ -171,18 +130,24 @@ fcs_calculate_score <- function(fg_df,
 #'   `fcs` values in a data.frame.
 #' 
 #' @examples
-#' vars <- paste0(
-#'   "FCS", 
-#'   c("Stap", "Pulse", "Veg", "Fruit", "Pr", "Dairy", "Sugar", "Fat", "Cond")
-#' ) |>
-#'   as.list()
+#' var_map <- fcs_fg_map_variables(
+#'   staples = "FCSStap",
+#'   pulses = "FCSPulse",
+#'   vegetables = "FCSVeg",
+#'   fruits = "FCSFruit",
+#'   meatfish = "FCSPr",
+#'   milk = "FCSDairy",
+#'   sugar = "FCSSugar",
+#'   oil = "FCSFat",
+#'   condiment = "FCSCond"
+#' ) 
 #' 
-#' var_map <- do.call(fcs_map_fg_vars, vars) 
-#' 
-#' fcs <- fcs_calculate_score(fg_df = fcs01, var_map = var_map)
+#' fcs <- fcs_calculate(df = fcs01, var_map = var_map)
 #' 
 #' fcs_classify(fcs$fcs)
 #'
+#' @author Ernest Guevarra
+#' 
 #' @export
 #' 
 
@@ -219,9 +184,18 @@ fcs_classify <- function(fcs, cutoff = NULL, add = FALSE, spread = FALSE) {
 
 
 #'
-#' Food Consumption Score colours
+#' Get Food Consumption Score (FCS) colours
+#' 
+#' @returns A named character vector of recommended FCS classification colours
+#' 
+#' @examples
+#' fcs_get_colours()
+#'
+#' @author Ernest Guevarra
+#'  
+#' @export
 #' 
 
-fcs_colours <- c(
-  acceptable = "#ECE1B1", borderline = "#E67536", poor = "#D70000"
-)
+fcs_get_colours <- function() {
+  c(acceptable = "#ECE1B1", borderline = "#E67536", poor = "#D70000")
+}

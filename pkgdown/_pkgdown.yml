@@ -56,6 +56,18 @@ reference:
 
   - title: Food Consumption Score
     contents:
-    - starts_with("fcs")
+    - fcs_recode
+    - fcs_calculate
+    - fcs_classify
+    - fcs_get_colours
+
+  - title: Indicator variable mapping
+    contents:
+    - map_variables
+    - fcs_fg_map_variables
+
+  - title: Datasets
+    contents:
+    - fcs01
 
 

@@ -44,3 +44,4 @@ spread_vector_to_columns <- function(x, fill = NULL, na_rm = FALSE, prefix) {
     data.frame() |>
     stats::setNames(col_names)
 }
+

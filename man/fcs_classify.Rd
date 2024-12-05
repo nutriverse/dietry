@@ -2,7 +2,7 @@
 % Please edit documentation in R/01_food_consumption_score.R
 \name{fcs_classify}
 \alias{fcs_classify}
-\title{Classify Food Consumption Score}
+\title{Classify Food Consumption Score (FCS)}
 \usage{
 fcs_classify(fcs, cutoff = NULL, add = FALSE, spread = FALSE)
 }
@@ -28,19 +28,26 @@ FCS classifications. If \code{add = TRUE}, this vector is concatenated with the
 \code{fcs} values in a data.frame.
 }
 \description{
-Classify Food Consumption Score
+Classify Food Consumption Score (FCS)
 }
 \examples{
-vars <- paste0(
-  "FCS", 
-  c("Stap", "Pulse", "Veg", "Fruit", "Pr", "Dairy", "Sugar", "Fat", "Cond")
-) |>
-  as.list()
+var_map <- fcs_fg_map_variables(
+  staples = "FCSStap",
+  pulses = "FCSPulse",
+  vegetables = "FCSVeg",
+  fruits = "FCSFruit",
+  meatfish = "FCSPr",
+  milk = "FCSDairy",
+  sugar = "FCSSugar",
+  oil = "FCSFat",
+  condiment = "FCSCond"
+) 
 
-var_map <- do.call(fcs_map_fg_vars, vars) 
-
-fcs <- fcs_calculate_score(fg_df = fcs01, var_map = var_map)
+fcs <- fcs_calculate(df = fcs01, var_map = var_map)
 
 fcs_classify(fcs$fcs)
 
+}
+\author{
+Ernest Guevarra
 }
