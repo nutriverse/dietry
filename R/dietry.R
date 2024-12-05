@@ -10,5 +10,6 @@
 #' @docType package
 #' @keywords internal
 #' @name dietry
+#' 
 #'
 "_PACKAGE"

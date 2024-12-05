@@ -1,0 +1,61 @@
+title: dietry
+
+url: https://nutriverse.io/dietry/
+
+development:
+  mode: auto
+
+template:
+  bootstrap: 5
+  bootswatch: pulse
+  theme: breeze-light
+  ganalytics: ""
+  bslib:
+    pkgdown-nav-height: 100px
+
+navbar:
+  bg: success
+  type: light
+  structure:
+    left:  [home, intro, reference, articles, news]
+    right: [search, mastodon, github]
+
+  components:
+    # articles:
+    #   text: Articles
+    #   menu:
+    #   - text: Check ranges and legal values
+    #     href: articles/rl.html
+    #   - text: Identify outliers using scatter plots
+    #     href: articles/sp.html
+    #   - text: Identify outliers using flags
+    #     href: articles/flagging.html
+    #   - text: Assess distributions of variables and indices
+    #     href: articles/ad.html
+    #   - text: Assess digit preference
+    #     href: articles/dp.html
+    #   - text: Assess age heaping
+    #     href: articles/ah.html
+    #   - text: Assess sex ratio
+    #     href: articles/sr.html
+    #   - text: Assess age and sex distributions
+    #     href: articles/as.html
+    mastodon:
+      icon: fab fa-mastodon fa-lg
+      href: https://mastodon.social/@nutriverse
+
+# home:
+#   links:
+#   - text: Read more about NiPN
+#     href: https://www.nipn-nutrition-platforms.org
+
+reference:
+  - title: Description
+    contents:
+    - dietry
+
+  - title: Food Consumption Score
+    contents:
+    - starts_with("fcs")
+
+
