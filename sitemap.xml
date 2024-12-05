@@ -7,12 +7,12 @@
 <url><loc>https://nutriverse.io/dietry/index.html</loc></url>
 <url><loc>https://nutriverse.io/dietry/reference/dietry.html</loc></url>
 <url><loc>https://nutriverse.io/dietry/reference/fcs01.html</loc></url>
-<url><loc>https://nutriverse.io/dietry/reference/fcs_calculate_score.html</loc></url>
+<url><loc>https://nutriverse.io/dietry/reference/fcs_calculate.html</loc></url>
 <url><loc>https://nutriverse.io/dietry/reference/fcs_classify.html</loc></url>
-<url><loc>https://nutriverse.io/dietry/reference/fcs_colours.html</loc></url>
-<url><loc>https://nutriverse.io/dietry/reference/fcs_map_fg_vars.html</loc></url>
-<url><loc>https://nutriverse.io/dietry/reference/fcs_recode_group.html</loc></url>
+<url><loc>https://nutriverse.io/dietry/reference/fcs_get_colours.html</loc></url>
+<url><loc>https://nutriverse.io/dietry/reference/fcs_recode.html</loc></url>
 <url><loc>https://nutriverse.io/dietry/reference/index.html</loc></url>
+<url><loc>https://nutriverse.io/dietry/reference/map_variables.html</loc></url>
 <url><loc>https://nutriverse.io/dietry/reference/spread_vector_to_columns.html</loc></url>
 </urlset>
 
