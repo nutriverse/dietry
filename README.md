@@ -13,6 +13,8 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 [![R-CMD-check](https://github.com/nutriverse/dietry/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/nutriverse/dietry/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/nutriverse/dietry/branch/main/graph/badge.svg)](https://app.codecov.io/gh/nutriverse/dietry?branch=main)
+[![CodeFactor](https://www.codefactor.io/repository/github/nutriverse/dietry/badge)](https://www.codefactor.io/repository/github/nutriverse/dietry)
+[![DOI](https://zenodo.org/badge/477273747.svg)](https://zenodo.org/badge/latestdoi/477273747)
 <!-- badges: end -->
 
 Food security assessments utilise several dietary intake indicators as
@@ -23,17 +25,24 @@ reliable results.
 
 ## What does `dietry` do?
 
+Currently, the `dietry` package has functions for:
+
+  - Cleaning, processing, scoring, and classifying the Food Consumption
+    Score.
+
 ## Installation
 
 The `dietry` package is still in active development and not yet
 available on [CRAN](https://cran.r-project.org/).
 
-You can install the development version of dietry from
-[GitHub](https://github.com/) with:
+You can install the development version of `dietry` from the [nutriverse
+R Universe](https://nutriverse.r-universe.dev) with:
 
 ``` r
-if (!require(remotes)) install.packages("remotes")
-remotes::install_github("nutriverse/dietry")
+install.packages(
+  "dietry", 
+  repos = c('https://nutriverse.r-universe.dev', 'https://cloud.r-project.org')
+)
 ```
 
 ## Citation

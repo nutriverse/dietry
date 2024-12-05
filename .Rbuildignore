@@ -6,3 +6,6 @@
 ^CODE_OF_CONDUCT\.md$
 ^\.github$
 ^codecov\.yml$
+^pkgdown$
+^_pkgdown\.yml$
+^docs$
