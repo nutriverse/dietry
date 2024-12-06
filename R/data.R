@@ -2,6 +2,8 @@
 #' Sample Food Consumption Score (FCS) data from World Food Programme (WFP)
 #' VAM Resource Centre
 #'
+#' @docType data
+#' 
 #' @format A data frame with 18 columns and 26 rows:
 #'
 #' | **Variable** | **Description** |

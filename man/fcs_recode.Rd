@@ -4,7 +4,7 @@
 \alias{fcs_recode}
 \title{Recode Food Consumption Score (FCS) data}
 \usage{
-fcs_recode(x, na_values = NA)
+fcs_recode(x, na_values = NULL)
 }
 \arguments{
 \item{x}{A vector of numeric values that can range from 0 to 7 for the number
