@@ -24,6 +24,10 @@ fcs_class_only_df <- fcs_classify(fcs_vector, add = FALSE, spread = TRUE)
 test_that("fcs_recode works as expected", {
   expect_type(fcs_recode(fcs01$FCSStap), "integer")
   expect_true(all(fcs_recode(fcs01$FCSStap) %in% seq(from = 0, to = 7, by = 1)))
+  expect_type(fcs_recode(fcs01$FCSStap, na_values = c(88, 99)), "integer")
+  expect_true(
+    all(fcs_recode(fcs01$FCSStap, na_values = c(88, 99)) %in% 
+      seq(from = 0, to = 7, by = 1)))
 })
 
 
@@ -38,4 +42,8 @@ test_that("fcs_classify works as expected", {
   expect_s3_class(fcs_class_expanded_df, "data.frame")
   expect_s3_class(fcs_class_only_df, "data.frame")
   expect_true(is(fcs_class_vector, "factor"))
+})
+
+test_that("fcs_get_colours works as expected", {
+  expect_named(fcs_get_colours(), c("acceptable", "borderline", "poor"))
 })
