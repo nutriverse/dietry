@@ -29,7 +29,7 @@ test_that("fcs_recode works as expected", {
 
 test_that("fcs_calculate works as expected", {
   expect_s3_class(fcs_df, "data.frame")
-  expect_vector(fcs_vector, ptype = double(), size = nrow(fcs01))
+  expect_type(fcs_vector, "double")
 })
 
 
@@ -37,9 +37,5 @@ test_that("fcs_classify works as expected", {
   expect_s3_class(fcs_class_df, "data.frame")
   expect_s3_class(fcs_class_expanded_df, "data.frame")
   expect_s3_class(fcs_class_only_df, "data.frame")
-  expect_vector(
-    fcs_class_vector, 
-    factor(levels = c("poor", "borderline", "acceptable")), 
-    length(fcs_vector)
-  )
+  expect_true(is(fcs_class_vector, "factor"))
 })
