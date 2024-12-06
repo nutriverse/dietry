@@ -4,5 +4,7 @@
 .Ruserdata
 
 README.html
-
 docs
+
+data-raw/FNSDataset.xlsx
+data-raw/1. FCS.sav

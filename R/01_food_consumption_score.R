@@ -17,15 +17,19 @@
 #' @export
 #'     
 
-fcs_recode <- function(x, na_values = NA) {
+fcs_recode <- function(x, na_values = NULL) {
   ## Recode NA values to NA ----
-  x <- ifelse(x %in% na_values, NA, x)
+  if (!is.null(na_values)) x[x %in% na_values] <- NA_integer_
 
   ## Recode x to 0 if NA ----
-  x <- ifelse(is.na(x), 0, x)
+  x[is.na(x)] <- 0L
 
   ## Recode x if x > 7 ----
-  x <- ifelse(x > 7, 7, x)
+  x <- ifelse(x > 7L, 7L, x)
+  x[x > 7L] <- 7L
+
+  ## Set x as integer ----
+  x <- as.integer(x)
 
   ## Return x ----
   x

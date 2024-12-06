@@ -13,7 +13,8 @@ Description: Food security assessments utilise several dietary intake indicators
     results.
 License: GPL (>= 3)
 Suggests: 
-    spelling
+    spelling,
+    testthat (>= 3.0.0)
 Encoding: UTF-8
 Language: en-GB
 LazyData: true
@@ -23,3 +24,4 @@ URL: https://nutriverse.io/dietry/, https://github.com/nutriverse/dietry
 BugReports: https://github.com/nutriverse/dietry/issues
 Depends: 
     R (>= 2.10)
+Config/testthat/edition: 3
