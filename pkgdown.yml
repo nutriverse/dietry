@@ -1,8 +1,10 @@
 pandoc: 3.1.11
 pkgdown: 2.1.1
 pkgdown_sha: ~
-articles: {}
-last_built: 2024-12-06T10:08Z
+articles:
+  dietry: dietry.html
+  articles/fcs: fcs.html
+last_built: 2024-12-06T11:52Z
 urls:
   reference: https://nutriverse.io/dietry/reference
   article: https://nutriverse.io/dietry/articles
