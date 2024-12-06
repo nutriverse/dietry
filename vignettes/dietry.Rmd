@@ -1,0 +1,41 @@
+---
+title: "Introducing dietry"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introducing dietry}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, echo = FALSE}
+library(dietry)
+```
+
+Food security assessments utilise several dietary intake indicators as proxy measures for diet quality, diet sufficiency, and food availability either at individual or household level. Utilities for recoding and calculating these indicators support in establishing consistent and reliable results. This is the main motivation of the `dietry` package.
+
+The dietry package provides/will be providing function sets for the following dietary intake indicators:
+
+**Indicators** | **Shortcode** | **Status**
+:--- | :--- | :---
+Food Consumption Score | FCS | ![FCS](https://img.shields.io/badge/status-available-green?style=for-the-badge)
+Food Consumption Score for Nutrition Quality Analysis | FCS-N | ![FCS-N](https://img.shields.io/badge/status-in_process-yellow?style=for-the-badge)
+Household Dietary Diversity Score | HDDS | ![HDDS](https://img.shields.io/badge/status-in_process-yellow?style=for-the-badge)
+Minimum Dietary Diversity for Women | MDD-W | ![MDD-W](https://img.shields.io/badge/status-in_process-yellow?style=for-the-badge)
+Women's Dietary Diversity Score | WDDS | ![WDDS](https://img.shields.io/badge/status-in_process-yellow?style=for-the-badge)
+Household Food Insecurity Access Scale | HFIAS | ![HFIAS](https://img.shields.io/badge/status-planned-lightgrey?style=for-the-badge)
+Food Insecurity Experience Scale | FIES | ![FIES](https://img.shields.io/badge/status-planned-lightgrey?style=for-the-badge)
+Household Hunger Scale | HHS | ![HHS](https://img.shields.io/badge/status-in_process-yellow?style=for-the-badge)
+
+The package also includes/will include non-diet specific but food security-related indicators that are commonly assessed alongside dietary intake indicators in a food security assessment. These are:
+
+**Indicators** | **Shortcode** | **Status**
+:--- | :--- | :---
+Reduced Coping Strategies Index | RCSI | ![RCSI](https://img.shields.io/badge/status-planned-lightgrey?style=for-the-badge)
+Livelihoods Coping Strategies Index | LCSI | ![LCSI](https://img.shields.io/badge/status-planned-lightgrey?style=for-the-badge)

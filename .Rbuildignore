@@ -10,3 +10,4 @@
 ^_pkgdown\.yml$
 ^docs$
 ^README\.html$
+^vignettes/articles$
