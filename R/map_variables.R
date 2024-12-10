@@ -4,13 +4,13 @@
 #' @param ... Name-value pairs. Name gives the labels for indicators. The value
 #'   should be the corresponding variable name in a dataset used for that
 #'   indicator.
-#' @param indicators A character vector of indicator labels for a specific
+#' @param foodgroups A character vector of food group labels for a specific
 #'   dietary intake indicator set.
 #' 
-#' @returns A named list of variable name/s for corresponding indicators.
+#' @returns A named list of variable name/s for corresponding food groups.
 #' 
 #' @examples 
-#' ## Variable names in fcs01 mapped to corresponding food group indicators
+#' ## Variable names in fcs01 mapped to corresponding food group labels
 #' map_variables(
 #'   staples = "FCSStap",
 #'   pulses = "FCSPulse",
@@ -37,7 +37,7 @@ map_variables <- function(...) {
 #' 
 
 fcs_fg_map_variables <- function(..., 
-                                 indicators = c("staples", "pulses", 
+                                 foodgroups = c("staples", "pulses", 
                                                 "vegetables", "fruits", 
                                                 "meatfish", "milk", "sugar",
                                                 "oil", "condiment")) {
@@ -45,16 +45,76 @@ fcs_fg_map_variables <- function(...,
   var_map <- map_variables(...)
 
   ## Check that variables map names are correct ----
-  missing_indicators <- indicators[!indicators %in% names(var_map)]
+  missing_foodgroups <- foodgroups[!foodgroups %in% names(var_map)]
 
-  if (length(missing_indicators) > 0)
+  if (length(missing_foodgroups) > 0)
     stop (
       "Variable map is missing values for ",
-      paste(missing_indicators, collapse = ", "), 
+      paste(missing_foodgroups, collapse = ", "), 
       ". Please check that you have specified variables for all ",
-      "FCS indicators or that you have spelled the FCS indicators correctly."
+      "FCS food groups or that you have spelled the FCS food groups correctly."
     )
   
   ## Return var_map ----
   var_map
+}
+
+
+#'
+#' @rdname map_variables
+#' @export
+#' 
+
+hdds_fg_map_variables <- function(...,
+                                  foodgroups = c("cereals", "roots_tubers",
+                                                 "vegetables", "fruits",
+                                                 "meat", "eggs", "fish",
+                                                 "pulses", "milk", "oil",
+                                                 "sugar", "condiments")) {
+  ## Create variables map ----
+  var_map <- map_variables(...)
+
+  ## Check that variables map names are correct ----
+  missing_foodgroups <- foodgroups[!foodgroups %in% names(var_map)]
+
+  if (length(missing_foodgroups) > 0)
+    stop (
+      "Variable map is missing values for ",
+      paste(missing_foodgroups, collapse = ", "), 
+      ". Please check that you have specified variables for all ",
+      "HDDS food groups or that you have spelled the HDDS food groups correctly."
+    )
+  
+  ## Return var_map ----
+  var_map
+}
+
+
+#'
+#' @rdname map_variables
+#' @export
+#' 
+
+mddw_fg_map_variables <- function(...,
+                                  foodgroups = c("staples", "pulses", "nuts",
+                                                 "milk", "meat_fish", "eggs",
+                                                 "green_leafy", "other_vita",
+                                                 "other_vegetables", 
+                                                 "other_fruits")) {
+    ## Create variables map ----
+    var_map <- map_variables(...)
+
+    ## Check that variables map names are correct ----
+    missing_foodgroups <- foodgroups[!foodgroups %in% names(var_map)]
+  
+    if (length(missing_foodgroups) > 0)
+      stop (
+        "Variable map is missing values for ",
+        paste(missing_foodgroups, collapse = ", "), 
+        ". Please check that you have specified variables for all ",
+        "HDDS food groups or that you have spelled the HDDS food groups correctly."
+      )
+    
+    ## Return var_map ----
+    var_map
 }

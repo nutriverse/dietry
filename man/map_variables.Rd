@@ -3,14 +3,28 @@
 \name{map_variables}
 \alias{map_variables}
 \alias{fcs_fg_map_variables}
+\alias{hdds_fg_map_variables}
+\alias{mddw_fg_map_variables}
 \title{Map data variables to corresponding indicators}
 \usage{
 map_variables(...)
 
 fcs_fg_map_variables(
   ...,
-  indicators = c("staples", "pulses", "vegetables", "fruits", "meatfish", "milk",
+  foodgroups = c("staples", "pulses", "vegetables", "fruits", "meatfish", "milk",
     "sugar", "oil", "condiment")
+)
+
+hdds_fg_map_variables(
+  ...,
+  foodgroups = c("cereals", "roots_tubers", "vegetables", "fruits", "meat", "eggs",
+    "fish", "pulses", "milk", "oil", "sugar", "condiments")
+)
+
+mddw_fg_map_variables(
+  ...,
+  foodgroups = c("staples", "pulses", "nuts", "milk", "meat_fish", "eggs", "green_leafy",
+    "other_vita", "other_vegetables", "other_fruits")
 )
 }
 \arguments{
@@ -18,17 +32,17 @@ fcs_fg_map_variables(
 should be the corresponding variable name in a dataset used for that
 indicator.}
 
-\item{indicators}{A character vector of indicator labels for a specific
+\item{foodgroups}{A character vector of food group labels for a specific
 dietary intake indicator set.}
 }
 \value{
-A named list of variable name/s for corresponding indicators.
+A named list of variable name/s for corresponding food groups.
 }
 \description{
 Map data variables to corresponding indicators
 }
 \examples{
-## Variable names in fcs01 mapped to corresponding food group indicators
+## Variable names in fcs01 mapped to corresponding food group labels
 map_variables(
   staples = "FCSStap",
   pulses = "FCSPulse",
