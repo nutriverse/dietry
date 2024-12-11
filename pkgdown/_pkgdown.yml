@@ -7,15 +7,16 @@ development:
 
 template:
   bootstrap: 5
-  bootswatch: pulse
   theme: breeze-light
   ganalytics: ""
   bslib:
+    bootswatch: pulse
     pkgdown-nav-height: 100px
+    success: "#004225"
 
 navbar:
   bg: success
-  type: light
+  type: dark
   structure:
     left:  [home, intro, reference, articles, news]
     right: [search, mastodon, github]
@@ -42,6 +43,7 @@ navbar:
     #     href: articles/as.html
     mastodon:
       icon: fab fa-mastodon fa-lg
+      aria-label: Mastodon
       href: https://mastodon.social/@nutriverse
 
 # home:

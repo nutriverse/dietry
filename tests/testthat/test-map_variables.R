@@ -17,7 +17,7 @@ test_that("fcs_fg_map_variables works as expected", {
     regexp = paste0(
       "Variable map is missing values for vegetables, fruits, milk, sugar, ",
       "oil, condiment. Please check that you have specified variables for all ",
-      "FCS indicators or that you have spelled the FCS indicators correctly."
+      "FCS food groups or that you have spelled the FCS food groups correctly."
     )
   )
 })

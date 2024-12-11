@@ -29,13 +29,15 @@ Food Consumption Score for Nutrition Quality Analysis | FCS-N | ![FCS-N](https:/
 Household Dietary Diversity Score | HDDS | ![HDDS](https://img.shields.io/badge/status-in_process-yellow?style=for-the-badge)
 Minimum Dietary Diversity for Women | MDD-W | ![MDD-W](https://img.shields.io/badge/status-in_process-yellow?style=for-the-badge)
 Women's Dietary Diversity Score | WDDS | ![WDDS](https://img.shields.io/badge/status-in_process-yellow?style=for-the-badge)
-Household Food Insecurity Access Scale | HFIAS | ![HFIAS](https://img.shields.io/badge/status-planned-lightgrey?style=for-the-badge)
-Food Insecurity Experience Scale | FIES | ![FIES](https://img.shields.io/badge/status-planned-lightgrey?style=for-the-badge)
-Household Hunger Scale | HHS | ![HHS](https://img.shields.io/badge/status-in_process-yellow?style=for-the-badge)
+Infant and Young Child Feeding | IYCF | ![IYCF](https://img.shields.io/badge/status-planned-lightgrey?style=for-the-badge)
+
 
 The package also includes/will include non-diet specific but food security-related indicators that are commonly assessed alongside dietary intake indicators in a food security assessment. These are:
 
 **Indicators** | **Shortcode** | **Status**
 :--- | :--- | :---
+Household Hunger Scale | HHS | ![HHS](https://img.shields.io/badge/status-in_process-yellow?style=for-the-badge)
+Household Food Insecurity Access Scale | HFIAS | ![HFIAS](https://img.shields.io/badge/status-planned-lightgrey?style=for-the-badge)
+Food Insecurity Experience Scale | FIES | ![FIES](https://img.shields.io/badge/status-planned-lightgrey?style=for-the-badge)
 Reduced Coping Strategies Index | RCSI | ![RCSI](https://img.shields.io/badge/status-planned-lightgrey?style=for-the-badge)
 Livelihoods Coping Strategies Index | LCSI | ![LCSI](https://img.shields.io/badge/status-planned-lightgrey?style=for-the-badge)

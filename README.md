@@ -27,8 +27,8 @@ reliable results.
 
 Currently, the `dietry` package has functions for:
 
-  - Cleaning, processing, scoring, and classifying the Food Consumption
-    Score.
+  - Cleaning, processing, scoring, and classifying the [Food Consumption
+    Score](https://resources.vam.wfp.org/data-analysis/quantitative/food-security/food-consumption-score).
 
 ## Installation
 

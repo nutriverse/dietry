@@ -12,6 +12,8 @@ Description: Food security assessments utilise several dietary intake indicators
     calculating these indicators support in establishing consistent and reliable
     results.
 License: GPL (>= 3)
+Depends: 
+    R (>= 2.10)
 Suggests: 
     knitr,
     rmarkdown,
@@ -24,8 +26,6 @@ RoxygenNote: 7.3.2
 Roxygen: list(markdown = TRUE)
 URL: https://nutriverse.io/dietry/, https://github.com/nutriverse/dietry
 BugReports: https://github.com/nutriverse/dietry/issues
-Depends: 
-    R (>= 2.10)
 Config/testthat/edition: 3
 Config/Needs/website: rmarkdown
 VignetteBuilder: knitr
