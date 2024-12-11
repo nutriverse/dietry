@@ -8,7 +8,7 @@ development:
 template:
   bootstrap: 5
   theme: breeze-light
-  ganalytics: ""
+  ganalytics: "G-D5YV0NJKN4"
   bslib:
     bootswatch: pulse
     pkgdown-nav-height: 100px
@@ -22,25 +22,11 @@ navbar:
     right: [search, mastodon, github]
 
   components:
-    # articles:
-    #   text: Articles
-    #   menu:
-    #   - text: Check ranges and legal values
-    #     href: articles/rl.html
-    #   - text: Identify outliers using scatter plots
-    #     href: articles/sp.html
-    #   - text: Identify outliers using flags
-    #     href: articles/flagging.html
-    #   - text: Assess distributions of variables and indices
-    #     href: articles/ad.html
-    #   - text: Assess digit preference
-    #     href: articles/dp.html
-    #   - text: Assess age heaping
-    #     href: articles/ah.html
-    #   - text: Assess sex ratio
-    #     href: articles/sr.html
-    #   - text: Assess age and sex distributions
-    #     href: articles/as.html
+    articles:
+      text: Articles
+      menu:
+      - text: Food Consumption Score
+        href: articles/fcs.html
     mastodon:
       icon: fab fa-mastodon fa-lg
       aria-label: Mastodon
