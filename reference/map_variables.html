@@ -3,7 +3,7 @@
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
 
 
-    <nav class="navbar navbar-expand-lg fixed-top bg-success" data-bs-theme="light" aria-label="Site navigation"><div class="container">
+    <nav class="navbar navbar-expand-lg fixed-top bg-success" data-bs-theme="dark" aria-label="Site navigation"><div class="container">
 
     <a class="navbar-brand me-2" href="../index.html">dietry</a>
 
@@ -23,7 +23,7 @@
   </ul></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json"></form></li>
-<li class="nav-item"><a class="external-link nav-link" href="https://mastodon.social/@nutriverse"><span class="fa fab fa-mastodon fa-lg"></span></a></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://mastodon.social/@nutriverse" aria-label="Mastodon"><span class="fa fab fa-mastodon fa-lg"></span></a></li>
 <li class="nav-item"><a class="external-link nav-link" href="https://github.com/nutriverse/dietry/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul></div>
 
@@ -47,8 +47,20 @@
 <span></span>
 <span><span class="fu">fcs_fg_map_variables</span><span class="op">(</span></span>
 <span>  <span class="va">...</span>,</span>
-<span>  indicators <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"staples"</span>, <span class="st">"pulses"</span>, <span class="st">"vegetables"</span>, <span class="st">"fruits"</span>, <span class="st">"meatfish"</span>, <span class="st">"milk"</span>,</span>
+<span>  foodgroups <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"staples"</span>, <span class="st">"pulses"</span>, <span class="st">"vegetables"</span>, <span class="st">"fruits"</span>, <span class="st">"meatfish"</span>, <span class="st">"milk"</span>,</span>
 <span>    <span class="st">"sugar"</span>, <span class="st">"oil"</span>, <span class="st">"condiment"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">hdds_fg_map_variables</span><span class="op">(</span></span>
+<span>  <span class="va">...</span>,</span>
+<span>  foodgroups <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"cereals"</span>, <span class="st">"roots_tubers"</span>, <span class="st">"vegetables"</span>, <span class="st">"fruits"</span>, <span class="st">"meat"</span>, <span class="st">"eggs"</span>,</span>
+<span>    <span class="st">"fish"</span>, <span class="st">"pulses"</span>, <span class="st">"milk"</span>, <span class="st">"oil"</span>, <span class="st">"sugar"</span>, <span class="st">"condiments"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">mddw_fg_map_variables</span><span class="op">(</span></span>
+<span>  <span class="va">...</span>,</span>
+<span>  foodgroups <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"staples"</span>, <span class="st">"pulses"</span>, <span class="st">"nuts"</span>, <span class="st">"milk"</span>, <span class="st">"meat_fish"</span>, <span class="st">"eggs"</span>, <span class="st">"green_leafy"</span>,</span>
+<span>    <span class="st">"other_vita"</span>, <span class="st">"other_vegetables"</span>, <span class="st">"other_fruits"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -62,19 +74,19 @@ should be the corresponding variable name in a dataset used for that
 indicator.</p></dd>
 
 
-<dt id="arg-indicators">indicators<a class="anchor" aria-label="anchor" href="#arg-indicators"></a></dt>
-<dd><p>A character vector of indicator labels for a specific
+<dt id="arg-foodgroups">foodgroups<a class="anchor" aria-label="anchor" href="#arg-foodgroups"></a></dt>
+<dd><p>A character vector of food group labels for a specific
 dietary intake indicator set.</p></dd>
 
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>A named list of variable name/s for corresponding indicators.</p>
+    <p>A named list of variable name/s for corresponding food groups.</p>
     </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Variable names in fcs01 mapped to corresponding food group indicators</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Variable names in fcs01 mapped to corresponding food group labels</span></span></span>
 <span class="r-in"><span><span class="fu">map_variables</span><span class="op">(</span></span></span>
 <span class="r-in"><span>  staples <span class="op">=</span> <span class="st">"FCSStap"</span>,</span></span>
 <span class="r-in"><span>  pulses <span class="op">=</span> <span class="st">"FCSPulse"</span>,</span></span>
