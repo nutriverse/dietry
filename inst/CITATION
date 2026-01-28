@@ -4,7 +4,7 @@ bibentry(
   title   = "dietry: Utilities for Dietary Intake Indicators for Food Security Assessments",
   author  = person("Ernest Guevarra"),
   year    = "2024",
-  note    = "R package version 0.0.0.9000",
+  note    = "R package version 0.0.0.9001",
   url     = "https://nutriverse.io/dietry/"
 )
 

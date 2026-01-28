@@ -12,7 +12,7 @@ public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostat
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![R-CMD-check](https://github.com/nutriverse/dietry/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/nutriverse/dietry/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
-coverage](https://codecov.io/gh/nutriverse/dietry/branch/main/graph/badge.svg)](https://app.codecov.io/gh/nutriverse/dietry?branch=main)
+coverage](https://codecov.io/gh/nutriverse/dietry/graph/badge.svg)](https://app.codecov.io/gh/nutriverse/dietry)
 [![CodeFactor](https://www.codefactor.io/repository/github/nutriverse/dietry/badge)](https://www.codefactor.io/repository/github/nutriverse/dietry)
 [![DOI](https://zenodo.org/badge/477273747.svg)](https://zenodo.org/badge/latestdoi/477273747)
 <!-- badges: end -->
@@ -23,20 +23,20 @@ either at individual or household level. Utilities for recoding and
 calculating these indicators support in establishing consistent and
 reliable results.
 
-## What does `dietry` do?
+## What does the package do?
 
-Currently, the `dietry` package has functions for:
+Currently, the `{dietry}` package has functions for:
 
-  - Cleaning, processing, scoring, and classifying the [Food Consumption
-    Score](https://resources.vam.wfp.org/data-analysis/quantitative/food-security/food-consumption-score).
+- Cleaning, processing, scoring, and classifying the [Food Consumption
+  Score](https://resources.vam.wfp.org/data-analysis/quantitative/food-security/food-consumption-score).
 
 ## Installation
 
-The `dietry` package is still in active development and not yet
+The `{dietry}` package is still in active development and not yet
 available on [CRAN](https://cran.r-project.org/).
 
-You can install the development version of `dietry` from the [nutriverse
-R Universe](https://nutriverse.r-universe.dev) with:
+You can install the development version of `{dietry}` from the
+[nutriverse R Universe](https://nutriverse.r-universe.dev) with:
 
 ``` r
 install.packages(
@@ -47,8 +47,9 @@ install.packages(
 
 ## Citation
 
-If you find the `dietry` package useful, please cite using the suggested
-citation provided by a call to the `citation` function as follows:
+If you find the `{dietry}` package useful, please cite using the
+suggested citation provided by a call to the `citation` function as
+follows:
 
 ``` r
 citation("dietry")
@@ -56,7 +57,7 @@ citation("dietry")
 #> 
 #>   Ernest Guevarra (2024). _dietry: Utilities for Dietary Intake
 #>   Indicators for Food Security Assessments_. R package version
-#>   0.0.0.9000, <https://nutriverse.io/dietry/>.
+#>   0.0.0.9001, <https://nutriverse.io/dietry/>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
@@ -64,7 +65,7 @@ citation("dietry")
 #>     title = {dietry: Utilities for Dietary Intake Indicators for Food Security Assessments},
 #>     author = {{Ernest Guevarra}},
 #>     year = {2024},
-#>     note = {R package version 0.0.0.9000},
+#>     note = {R package version 0.0.0.9001},
 #>     url = {https://nutriverse.io/dietry/},
 #>   }
 ```
@@ -79,3 +80,10 @@ guidelines](https://nutriverse.io/dietry/CONTRIBUTING.html).
 This project is released with a [Contributor Code of
 Conduct](https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html).
 By contributing to this project, you agree to abide by its terms.
+
+<br/>
+
+[![This is part of the nutriverse project under the Oxford iHealth
+initiative of the MSc in International Health and Tropical Medicine,
+Nuffield Department of Medicine, University of
+Oxford](https://github.com/nutriverse/nutriverse-images/blob/main/nutriverse/nutriverse_footer.png?raw=true)](https://nutriverse.io)

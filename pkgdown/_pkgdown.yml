@@ -8,18 +8,28 @@ development:
 template:
   bootstrap: 5
   theme: breeze-light
-  ganalytics: "G-D5YV0NJKN4"
   bslib:
     bootswatch: pulse
     pkgdown-nav-height: 100px
     success: "#004225"
+  includes:
+    in_header: |
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-D5YV0NJKN4"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-D5YV0NJKN4');
+      </script>
 
 navbar:
   bg: success
   type: dark
   structure:
     left:  [home, intro, reference, articles, news]
-    right: [search, mastodon, github]
+    right: [search, website, mastodon, bluesky, linkedin github]
 
   components:
     articles:
@@ -27,10 +37,22 @@ navbar:
       menu:
       - text: Food Consumption Score
         href: articles/fcs.html
+    website:
+      icon: "fa-globe"
+      href: https://nutriverse.io
+      aria-label: Website
     mastodon:
       icon: fab fa-mastodon fa-lg
-      aria-label: Mastodon
       href: https://mastodon.social/@nutriverse
+      aria-label: Mastodon
+    bluesky:
+      icon: "fab fa-bluesky fa-lg"
+      href: https://bsky.app/profile/nutriverse.io
+      aria-label: Bluesky
+    linkedin:
+      icon: "fab fa-linkedin fa-lg"
+      href: https://www.linkedin.com/company/nutriverse-community
+      aria-label: LinkedIn
 
 # home:
 #   links:
